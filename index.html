@@ -78,12 +78,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    <title>impress.js | 使用现代浏览器中css3的tranforms和trasitions特性进行展示的工具 | by Bartek Szopka @bartaz | 翻译ed by xishui @ http://eyehere.net</title>
     
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="http://fonts.useso.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
     <!--
         
@@ -99,9 +99,9 @@
         
         When creating your own presentation get rid of this file. Start from scratch, it's fun!
         
-	impress.js不需要依靠任何别的css，所有的效果都已经包括在js里了。
-	接下来的demo的格式仅仅是用于普通的演讲风格的，或者是作为备用格式，哥不希望你直接用在你的演讲里面啊。（twitter Bootstrap继续泪目）
-	自己动手，丰衣足食。大家都不希望所有的impress.js演讲文稿都长一样子吧。
+        impress.js不需要依靠任何别的css，所有的效果都已经包括在js里了。
+        接下来的demo的格式仅仅是用于普通的演讲风格的，或者是作为备用格式，哥不希望你直接用在你的演讲里面啊。（twitter Bootstrap继续泪目）
+        自己动手，丰衣足食。大家都不希望所有的impress.js演讲文稿都长一样子吧。
         看完这个代码之后希望你能摆脱它的约束。从头开始构建属于自己的文稿，很有趣吧。
     -->
     <link href="css/impress-demo.css" rel="stylesheet" />
@@ -138,12 +138,12 @@
 
 <!--
     For example this fallback message is only visible when there is `impress-not-supported` class on body.
-	
+
     举个栗子，这里的备用信息只会在当 impress-not-supported 在body元素里时才可见。
 -->
 <div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    <p>尊驾的浏览器太老土啦！<b>无法满足impress.js的要求</b>，现在你只能看到一些最朴素的演示画面。</p>
+    <p>为了欣赏漂亮的演示画面，请使用先进、优雅、快速、美丽、免费的现代浏览器，比如 <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> 。</p>
 </div>
 
 <!--
@@ -194,15 +194,15 @@
         
         It will not be rotated or scaled.
 
-	现在会有些好玩的东西要发生了。
-	演示文稿的没一步都应该放在 #impress 中，以及一个叫做 step 的类名。这些 step 元素被impress.js所确定位置，旋转和缩放，监视器会显示演示的每一步。（这一段我也不是太懂。）
-	通过数据属性来定义位置信息。
-	在接下来的例子中我们仅仅用 data-x="-1000" 和 data-y="-1500 指定步元素中x和y的位置。这就意味着元素的中心，是的，就是中心，将会被挪到 x = -1000px 和 y = -1500px 的这个点。
+        现在会有些好玩的东西要发生了。
+        演示文稿的没一步都应该放在 #impress 中，以及一个叫做 step 的类名。这些 step 元素被impress.js所确定位置，旋转和缩放，监视器会显示演示的每一步。（这一段我也不是太懂。）
+        通过数据属性来定义位置信息。
+        在接下来的例子中我们仅仅用 data-x="-1000" 和 data-y="-1500 指定步元素中x和y的位置。这就意味着元素的中心，是的，就是中心，将会被挪到 x = -1000px 和 y = -1500px 的这个点。
         当然它不会被旋转或者缩放。
         
     -->
     <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
+        <q>你是不是觉得传统的幻灯片都 <b>弱爆了</b> ？</q>
     </div>
 
     <!--
@@ -219,20 +219,20 @@
         Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
         
-	这个id元素的属性可以标记在URL中，这也是可选的。
-	如果它没有被定义，它将会获得一个默认的值 step-N ，N是当前幻灯的页数。
+        这个id元素的属性可以标记在URL中，这也是可选的。
+        如果它没有被定义，它将会获得一个默认的值 step-N ，N是当前幻灯的页数。
         因此在接下来的例子里它将会获得 step-2 。
-	如果这一部分被激活，url将会变成 #/step-2 。
-	因此你也可以在链接里使用 #/step-2 ，直接指向这一页。
-	但是啊，少年你还是少用这种不符合标准的形式吧，如果你使用经典的方法比如 #step-2 ，那么即使用户不支持也可以使用备用效果。
-	  
+        如果这一部分被激活，url将会变成 #/step-2 。
+        因此你也可以在链接里使用 #/step-2 ，直接指向这一页。
+        但是啊，少年你还是少用这种不符合标准的形式吧，如果你使用经典的方法比如 #step-2 ，那么即使用户不支持也可以使用备用效果。
+      
     -->
     <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+        <q>你有没有想过，在 <strong>现代浏览器</strong> 光辉下，我们可以不再受限于 <strong>老旧浏览器的残忍压迫</strong> ？</q>
     </div>
 
     <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+        <q>你难道不想使用 <strong>华丽的舞台效果</strong> 来 <strong>震惊你的观众</strong> 吗？</q>
     </div>
 
     <!--
@@ -244,15 +244,15 @@
         From presentation and transitions point of view it means, that it will have to be scaled
         down (4 times) to make it back to it's correct size.
 
-	这是一个缩放的例子。
-	我们再次使用了 data- 的办法，这次用了 data-scale="4" ，它的意思是这个元素将会比其他的（这里指的是默认大小）大4倍。
-	从演示和转换的角度来看，这意味着，这将有被缩小（4倍），使其恢复到默认大小。
+        这是一个缩放的例子。
+        我们再次使用了 data- 的办法，这次用了 data-scale="4" ，它的意思是这个元素将会比其他的（这里指的是默认大小）大4倍。
+        从演示和转换的角度来看，这意味着，这将有被缩小（4倍），使其恢复到默认大小。
         
     -->
     <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
+        <span class="try">那么，您应该尝试一下</span>
         <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+        <span class="footnote"><sup>*</sup>美式的小幽默，无视</span>
     </div>
 
     <!--
@@ -262,17 +262,17 @@
         Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
         element should be rotated by 90 degrees clockwise.
         
-	这个元素介绍旋转。
-	我们用 data-rotate="90" ，意思是该元素将会顺时针旋转90度。（当然少年你也可以旋转个几万度来烧机子啊。）
+        这个元素介绍旋转。
+        我们用 data-rotate="90" ，意思是该元素将会顺时针旋转90度。（当然少年你也可以旋转个几万度来烧机子啊。）
     -->
     <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+        <p>它是一个 <strong>演示工具</strong> <br/>
+        受<a href="http://prezi.com">prezi.com</a>启发 <br/>
+        基于现代浏览器中 <strong>强大的CSS3特效</strong> 开发而成</p>
     </div>
 
     <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+        <p>它可以具象化您 <big style="font-size:larger">伟大</big> </p>
     </div>
 
     <!--
@@ -283,12 +283,12 @@
         `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
         positioned far away from us (by 3000px).
         
-    令人惊奇的时刻到了！我们正式的迈入了三维空间！
-    使用 data-x 与 data-y 两个元素，你可以用 data-z 来定义第三坐标轴 Z 的存在。在这个例子中我们将会使用 data-z="-3000"来使这个元素远离我们3000px。
-    （译者的忠告：如果您的空间想象能力不强，还是不要乱使用这个吧）
+        令人惊奇的时刻到了！我们正式的迈入了三维空间！
+        使用 data-x 与 data-y 两个元素，你可以用 data-z 来定义第三坐标轴 Z 的存在。在这个例子中我们将会使用 data-z="-3000"来使这个元素远离我们3000px。
+        （译者的忠告：如果您的空间想象能力不强，还是不要乱使用这个吧）
     -->
     <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
+        <p>或者 <span style="font-size:smaller">细致</span> 的 <span class="thoughts">想法</span></p>
     </div>
 
     <!--
@@ -310,30 +310,30 @@
         So basically every step element has one of three classes: `future`, `present` and `past`.
         Only one current step has the `present` class.
 
-    在这一页中并没有介绍什么新的有关于数据的东西，但是你应该注意到在这个demo中有一些文字看起来比较的带感。
-    这是一个比较基础的CSS变化。（后面半句可以认为是废话，想学英语的可以看一下）
-    在最开始的时候，所有的元素都会被分类到 future 中，这意味着他们没有被访问过。
-    当幻灯片开始移动使 future 的类移动到 present。
-    这也是为什么刚才那一页能够工作的原因-当这一页变成成 present 的时候文字就会移动。
-    最终这一页又会从 present 变化为 past 。
-    所以所有的页面都会有 future present past 三种类，只有当前正在运行的页面才会有 present 这个类。
+        在这一页中并没有介绍什么新的有关于数据的东西，但是你应该注意到在这个demo中有一些文字看起来比较的带感。
+        这是一个比较基础的CSS变化。（后面半句可以认为是废话，想学英语的可以看一下）
+        在最开始的时候，所有的元素都会被分类到 future 中，这意味着他们没有被访问过。
+        当幻灯片开始移动使 future 的类移动到 present。
+        这也是为什么刚才那一页能够工作的原因-当这一页变成成 present 的时候文字就会移动。
+        最终这一页又会从 present 变化为 past 。
+        所以所有的页面都会有 future present past 三种类，只有当前正在运行的页面才会有 present 这个类。
          
     -->
     <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+        <p>它在一个无线大的画布上，展示了 <b class="positioning">定位</b> , <b class="rotating">旋转</b> 和 <b class="scaling">缩放</b> 的特效</p>
     </div>
 
     <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+        <p><b class="imagination">心</b>有多大，<b>舞台</b>就有多大</p>
     </div>
 
     <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+        <p>想知道更多吗？</p>
+        <q><a href="http://github.com/bartaz/impress.js">查看源码吧</a>, 兄台!</q>
     </div>
 
     <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
+        <p>哦，还有一件事情……</p>
     </div>
 
     <!--
@@ -347,14 +347,14 @@
         You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
         as `data-rotate` (these two are basically aliases).
         
-    在这一页你可以感受到 impress.js 强大的力量和百变的灵活性。
-    你不只能够用坐标轴确定3D元素，你还可以让它绕着任意的坐标轴旋转。
-    这里这个例子会让他围绕 X 轴旋转-40度（逆时针40°）再围绕 Y 轴旋转10度。
-    你当然也可以使用 data-rotate-z 使元素围绕 Z 轴旋转，这当然和 data-rotate 效果是类似的。
+        在这一页你可以感受到 impress.js 强大的力量和百变的灵活性。
+        你不只能够用坐标轴确定3D元素，你还可以让它绕着任意的坐标轴旋转。
+        这里这个例子会让他围绕 X 轴旋转-40度（逆时针40°）再围绕 Y 轴旋转10度。
+        你当然也可以使用 data-rotate-z 使元素围绕 Z 轴旋转，这当然和 data-rotate 效果是类似的。
     -->
     <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
+        <p><span class="have">你</span> <span class="you">有没有</span> <span class="noticed">注意到</span> <span class="its">它</span> <span class="in">是</span> <b>3D<sup>*</sup></b>的？</p>
+        <span class="footnote">* prezi可没这能力</span>
     </div>
 
     <!--
@@ -371,14 +371,14 @@
         These values are used by impress.js in CSS transformation functions, so for more information consult
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
     
-    总结一下所有的定位用的属性:
+        总结一下所有的定位用的属性:
 
-    * data-x、data-y、data-z——他们定义以该点位置为中心的页面;它们的缺省值为0;
-    * data-rotate-x、data-rotate-y、data-rotate-z、data-rotate——他们定义为令元素围绕指定的坐标轴旋转指定度数;它们的缺省值是0,“data-rotate”和“data-rotate-z”是相似的;
-    *’data-scale”——定义步骤元素的大小（缩放）;缺省值是1
+        * data-x、data-y、data-z——他们定义以该点位置为中心的页面;它们的缺省值为0;
+        * data-rotate-x、data-rotate-y、data-rotate-z、data-rotate——他们定义为令元素围绕指定的坐标轴旋转指定度数;它们的缺省值是0,“data-rotate”和“data-rotate-z”是相似的;
+        *’data-scale”——定义步骤元素的大小（缩放）;缺省值是1
 
-    更多的信息请参考
-    CSS transfrom文档:https://developer.mozilla.org/en/CSS/transform
+        更多的信息请参考
+        CSS transfrom文档:https://developer.mozilla.org/en/CSS/transform
     -->
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
     </div>
@@ -408,16 +408,16 @@
     
     Just sayin' ;)
     
-这一段略扯……
-还有那个 just sayin 闹哪样了啊！！我看了半天发现这是开玩笑的……
-译者注：如果你只是一个使用者，看到这里就可以结束了，inpress.js的优点是无与伦比的，绚丽，帅气，然而对于普通的使用者来说，使用Micro$oft的软件要比这个要简单的多。
+    这一段略扯……
+    还有那个 just sayin 闹哪样了啊！！我看了半天发现这是开玩笑的……
+    译者注：如果你只是一个使用者，看到这里就可以结束了，inpress.js的优点是无与伦比的，绚丽，帅气，然而对于普通的使用者来说，使用Micro$oft的软件要比这个要简单的多。
 -->
 <div class="hint">
-    <p>Use a spacebar or arrow keys to navigate</p>
+    <p>使用空格或者方向键来移动</p>
 </div>
 <script>
 if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    document.querySelector(".hint").innerHTML = "<p>向左或向右拖动屏幕来移动</p>";
 }
 </script>
 
@@ -434,6 +434,17 @@ if ("ontouchstart" in document.documentElement) {
     And you should do it in the end of your document. Not only because it's a good practice, but also
     because it should be done when the whole document is ready.
     Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+
+    最后，但远远不是结束。
+    
+    为了让上述的动作顺利进行，我们必须在页面里包含impress.js这个文件。
+    建议你使用一个压缩过的文件。
+    
+    我这里包含了一个未压缩的版本，这样可以增加可读性
+    
+    你同时还需要使用`impress().init()`函数来初始化impress.js，你应该在最后调用这个函数。
+    并不仅仅因为这是个好习惯，而且这样会保证当页面加载完成后执行。
+    当然你可以使用“DOM ready”事件，但是我比较懒;)
     
 -->
 <script src="js/impress.js"></script>
@@ -462,6 +473,22 @@ if ("ontouchstart" in document.documentElement) {
     For some example uses of this API check the last part of the source of impress.js where the API
     is used in event handlers.
     
+    `impress()` 函数给了你一个控制演示API的方法。
+    
+    把结果放在一个变量里：
+    
+        var api = impress();
+    
+    这样你就可以使用几个可以使用的方法：
+    
+        `api.init()` - 初始化演示；
+        `api.next()` - 播放下一个幻灯片；
+        `api.prev()` - 回到上一个幻灯片；
+        `api.goto( idx | id | element, [duration] )` - 通过知道那个id或者DOM播放指定的幻灯片
+                可以指定转换时间（单位毫秒），当然时间可以是缺省的。
+    
+    你可以随时再次调用`impress()`来再一次获得这个API，类似`impress().next()`当然也是可以的。
+    不用担心，这不会再一次的初始化impress。
 -->
 
 </body>
@@ -494,6 +521,27 @@ if ("ontouchstart" in document.documentElement) {
     
     Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
     
+    OK，现在你或多或少的了解impress.js了，但是在你开始之前……
+    
+    你从GitHub上复制了代码（译注：或者你从我博客上复制了代码)？
+    
+    你已经在编辑器里打开了它？
+    
+    雅美蝶！
+
+    这不是你创造你的演示的正确方法，这只是个代码，你的想法才是好的演示的根本。
+    
+    所以，如果你想做个好演示，取来一张纸一支笔，然后关了你的电脑。
+    
+    描、绘、写，现在纸上进行一场头脑风暴，试着做一个思维导图，这个才能帮助你怎样更好的
+    创建impress.js的作品。
+    
+    当你在纸上完成了工程，再回到impress.js吧，一开始就用它毫无意义，只是浪费时间而已。
+    
+    如果你觉得我在胡扯，去看看一本叫做"Presentation Zen"（中译《演说之禅》，貌似还没有中文版）
+    的书吧，这本书能给你更多更好的创建演示的方法和知识。
+    
+    请虚心接受我的意见，“因为你都不知道该说些什么，impress.js更加不知道”。
 -->
 
 <!--
@@ -510,7 +558,7 @@ if ("ontouchstart" in document.documentElement) {
     
     Cheers!
 
-喂，老兄，我为了把你的教程读完，喝了可不止一杯咖啡或者茶又或者什么别的奇怪液体啊……
+    喂，老兄，我为了把你的教程读完，喝了可不止一杯咖啡或者茶又或者什么别的奇怪液体啊……
     
 -->
 
